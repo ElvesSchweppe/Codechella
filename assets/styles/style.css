@@ -112,6 +112,7 @@ nav{
 }
 
 .logo {
+    color: transparent;
     width: 234px
 }
 
@@ -132,7 +133,15 @@ nav{
     background-repeat: no-repeat;
     background-position: center;
     display: inline-block;
+    cursor: pointer;
+    transition: 400ms;
 }
+
+.topo__menu-hamburguer:hover {
+    transform: scale(1.5);
+}
+
+
 
 .lista-menu{
     display: none;
