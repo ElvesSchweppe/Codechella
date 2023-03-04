@@ -1,0 +1,505 @@
+@import url('https://fonts.googleapis.com/css2?family=Calistoga&family=Raleway:wght@500;700;800&display=swap&family=Freckle+Face&display=swap');
+
+:root{
+    --degrade-verao: linear-gradient(180deg, #BFDAE6 0%, #FCF0DD 52.6%, #FACF9D 100%);
+    --primaria-verao-azul: #2E7BA2;
+    --primaria-verao-mostarda: #DF9010;
+    --secundaria-verao-azulclaro: #C8DEEF;
+    --terciaria-verao-coral: #FBF0DD;
+    --terciaria-verao-amarelo: #FACF9D;
+
+    --degrade-boreal: linear-gradient(180deg, #304968 0%, #36C1A0 52.6%, #4650BD 100%);
+    --primaria-boreal-roxo: #4650BD;
+    --primaria-boreal-verde: #008364;
+    --secundaria-boreal-verde: #304968;
+    --terciaria-boreal-verdeclaro: #36C1A0;
+    --terciaria-boreal-lilas: #B6BCFF;
+
+    --verao--hover: #519EC5;
+    --boreal--hover: #606ADA;
+
+    --branco: #FFFFFF;
+    --cinza-4: #444444;
+    --cinza-9: #999999;
+
+    --fonte-titulos: 'Calistoga', cursive;
+    --fonte-textos: 'Raleway', sans-serif;
+    --fonte-logo: 'Freckle Face', cursive;
+}
+
+/*Seletor de tema*/
+.layout__input {
+    display: none;
+}
+
+.layout {
+    width: 124px;
+    height: 20px;
+    position: fixed;
+    top: 5px;
+    right: 5px;
+}
+
+.layout__botao {
+    height: 20px;
+    width: 110px;
+    border-radius: 11px;
+    background-color: var(--terciaria-verao-coral);
+    border: 2px solid var(--cinza-4);
+    cursor: pointer;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 0 5px;
+    transition: .5s;
+}
+
+.tag__layout {
+    font-family: var(--fonte-textos);
+    font-size: 12px;
+    color: var(--cinza-4);
+}
+
+.layout__botao_botao{
+    background-color: var(--primaria-verao-azul);
+    height: 16px;
+    width: 66px;
+    border-radius: 9px;
+    border: none;
+    pointer-events: none;
+    top: 2px;
+    left: 2px;
+    position: absolute;
+    font-size: 12px;
+    color: var(--branco);
+    transition: .5s
+}
+
+/*responsividade das imagens no tema padrão*/
+.verao,
+.mobile {
+    display: block;
+}
+
+.boreal,
+.tablet, 
+.desktop,
+.rodape > .boreal, 
+.rodape > .redes_sociais >.boreal {
+    display: none;
+}
+
+/*Ajuste Padrão Verão*/
+body{
+    font-family: var(--fonte-textos);
+}
+
+.topo{
+    position: fixed;
+    top: 0px;
+    background-color: var(--primaria-verao-azul);
+}
+
+nav{
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    width: 100vw;
+    height: 110px ;
+    min-width: 320px;
+}
+
+.logo {
+    width: 234px
+}
+
+.logo_nav {
+    width: 234px;
+    height: 64px;
+    background-image: url("../img/verao/Logo.png");
+}
+
+.logo_nav:hover {
+    background-image: url("../img/verao/Logo_hover-verao.png");
+}
+
+.topo__menu-hamburguer {
+    width: 24px;
+    height: 24px;
+    background-image: url('../img/verao/menu_hamburguer.png');
+    background-repeat: no-repeat;
+    background-position: center;
+    display: inline-block;
+}
+
+.lista-menu{
+    display: none;
+    position: absolute;
+    top: 115px;
+    left: 49%;
+    width: 50%;
+    background-color: var(--primaria-verao-azul);
+}
+
+.topo__conteudo_botao:checked ~.lista-menu {
+    display: block;
+}
+
+.topo__conteudo_botao {
+    display: none;
+}
+
+.lista-menu__item {
+    padding: 16px;
+    text-align: center;
+}
+
+.lista-menu__linha {
+    border: 2px solid var(--branco);
+    margin: 0 4vw;
+}
+
+.lista-menu__link {
+    color: var(--branco);
+    text-decoration: none;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+}
+
+.lista-menu__link:hover {
+    text-decoration: underline;
+    color: var(--primaria-verao-mostarda)
+}
+
+.banner_container {
+    height: 110px;
+}
+
+.banner{
+    width: 100vw;
+    height: 75vw;
+    min-width: 320px;
+    min-height: 240px;
+}
+
+.corpo {
+    min-width: 320px;
+    padding: 32px 0;
+
+    background: var(--degrade-verao);
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    color: var(--cinza-4);
+    gap: 2vw;
+}
+
+.corpo__secao{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 10px;
+}
+
+.imagem_1 {
+    width: 86vw;
+    height: 106vw;
+    min-width: 313px;
+    min-height: 381px;
+    border-radius: 4vw;
+}
+
+.corpo__secao_texto{
+    display:flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    margin: 32px 0;
+}
+
+.titulo_secao {
+    font-size: 32px;
+    line-height: 38px;
+    font-weight: 700;
+    width: 87vw;
+    min-width: 313px;
+    margin-bottom: 24px;
+}
+
+p {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 5px;
+}
+
+.ingresso {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 8px 16px;
+    gap: 16px;
+    width: 280px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--branco);
+    text-decoration: none;
+    background: var(--primaria-verao-azul);
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px var(--cinza-4);
+    transition: 0.5s all;
+    margin-top: 50px;
+}
+
+.ingresso:hover {
+    background: var(--verao--hover);
+}
+
+.titulo_line_up {
+    font-family: var(--fonte-titulos);
+    font-weight: 400;
+    font-size: 48px;
+    line-height: 62px;
+    margin: 50px 0;
+}
+
+.data {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card_data{
+    background-color: var(--primaria-verao-mostarda);
+    color: var(--branco);
+    font-family: var(--fonte-titulos);
+    font-weight: 400;
+    font-size: 32px;
+    line-height: 42px;
+    padding: 0.8rem;
+    min-width: 289px;
+    margin: 40px 0;
+}
+
+.linha_data {
+    width: 8vw;
+    border: 1px solid var(--primaria-verao-mostarda);
+    display: none;
+}
+
+.bandas{
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    
+}
+
+.bandas_1 {
+    font-weight: 800;
+    font-size: 48px;
+    line-height: 56px;
+}
+
+.bandas_2 {
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 47px;
+}
+
+.bandas_3 {
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.bandas_4 {
+    font-weight: 500;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.imagem_2 {
+    width: 100vw;
+    height: 94vw;
+}
+
+.rodape {
+    min-width: 320px;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--terciaria-verao-amarelo);
+    text-align: center;
+    align-items: center;
+}
+
+.icones_redes_lista{
+    display:flex;
+    flex-direction: row;
+    gap: 8px;
+    justify-content: center;
+}
+
+.icones_redes {
+    width: 32px;
+    height: 32px;
+}
+
+.destaque_rodape {
+    font-weight: 800;
+    color: var(--primaria-verao-azul);
+}
+
+/*Mudança de Tema Boreal*/
+
+.layout__input:checked ~.corpo {
+    background: var(--degrade-boreal);
+    color: var(--branco) ;
+}
+
+.layout__input:checked ~.topo > .layout > .switcher > .layout__botao> .layout__botao_botao { 
+    background-color: var(--primaria-boreal-roxo);
+    left: 52px;
+}
+
+.layout__input:checked ~ .topo,
+.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .ingresso {
+    background: var(--primaria-boreal-roxo)
+}
+
+.layout__input:checked ~.topo > .layout > .switcher > .layout__botao { 
+    background-color: var(--terciaria-boreal-verdeclaro);
+}
+
+.layout__input:checked ~.corpo > .data > .card_data {
+    background-color: var(--primaria-boreal-verde);
+}
+
+.layout__input:checked ~.corpo > .data > .linha_data {
+    border: 1px solid var(--primaria-boreal-verde);
+}
+
+.layout__input:checked ~.topo > nav > .topo__conteudo > .lista-menu,
+.layout__input:checked ~.rodape {
+    background-color: var(--primaria-boreal-roxo);
+    color: var(--branco);
+}
+
+.layout__input:checked ~.topo > nav > .topo__conteudo > .lista-menu > .lista-menu__item > .lista-menu__link:hover {
+    color: var(--terciaria-boreal-verdeclaro)
+}
+
+.layout__input:checked ~.topo > nav > .topo__conteudo > .logo > .logo_nav:hover {
+    background-image: url("../img/boreal/Logo_hover-boreal.png");
+}
+
+.layout__input:checked ~.rodape > p > .destaque_rodape{
+    color: var(--terciaria-boreal-verdeclaro);
+}
+
+.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .ingresso:hover {
+    background: var(--boreal--hover);
+}
+
+/* Elementos do tema*/
+
+.layout__input:checked ~.corpo > .corpo__secao > .imagem_1,
+.layout__input:checked ~.boreal,    
+.layout__input:checked ~.corpo > .boreal,
+.layout__input:checked ~.corpo >  .corpo__secao > .boreal,
+.layout__input:checked ~.rodape > .boreal,
+.layout__input:checked ~.rodape > .redes_sociais > .boreal {
+    display: block;
+}
+
+.layout__input:checked ~.verao,
+.layout__input:checked ~.corpo > .verao,
+.layout__input:checked ~.corpo > .corpo__secao > .verao,
+.layout__input:checked ~.rodape > .verao,
+.layout__input:checked ~.rodape > .redes_sociais > .verao {
+    display: none;
+}
+
+
+/*responsividade das imagens no tema boreal*/
+
+.layout__input:checked ~ .tablet, 
+.layout__input:checked ~ .desktop,
+.layout__input:checked ~ .corpo > .tablet, 
+.layout__input:checked ~ .corpo > .desktop,
+.layout__input:checked ~ .corpo > .corpo__secao > .tablet, 
+.layout__input:checked ~ .corpo > .corpo__secao > .desktop {
+    display: none;
+}
+
+
+/*Mapa de setores*/
+
+.mapa_legenda {
+    width: 100vw;
+}
+
+.esquema_setores {
+    width: 100vw;
+    height: 88.3vw;
+}
+
+.estadio_legenda {
+    width: 70vw;
+    padding: 5vw 15vw;
+    text-align: left;
+}
+
+.estadio_legenda > .titulo_secao {
+    font-size: 20px;
+}
+
+.imagem_mapa {
+    width: 87vw;
+    height: 66vw;
+    min-width: 313px;
+    min-height: 239px;
+    border-radius: 4vw;
+}
+
+.titulo_secao,
+.linha {
+    height: 70px;
+}
+
+.linha {
+    display: flex;
+    align-items: center;
+    text-align: center;
+    gap: 16px;
+}
+
+.linha > img{
+    width: 32px;
+    height: 32px;
+    border: 1px solid var(--cinza-4);
+    border-radius: 3px;
+}
+
+
+
+@media screen and (max-width: 324px) {
+    .layout {
+        top: 5px;
+        right: 50%;
+    }
+    
+    .lista-menu{
+        left: 10%;
+        width: 80%;
+    }
+
+
+}

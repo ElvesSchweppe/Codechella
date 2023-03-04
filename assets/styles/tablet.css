@@ -1,0 +1,176 @@
+@media screen and (min-width: 768px) {
+   
+    /*responsividade das imagens no tema padrão*/
+    .verao,
+    .tablet,
+    .imagem_1 {
+        display: block;
+    }
+
+    .boreal,
+    .mobile, 
+    .desktop,
+    .rodape > .boreal, 
+    .rodape > .redes_sociais >.boreal {
+        display: none;
+    }
+
+    .topo__conteudo_rotulo,
+    .lista-menu__linha {
+        display: none;
+    }
+
+    nav{
+        justify-content: center;
+    }
+
+    .lista-menu {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: nowrap;
+        justify-content: center;
+        width: 100vw;
+        top: 99px;
+        left: 0;
+    }
+
+    .banner_container{
+        height: 170px;
+    }
+
+    .banner{
+        height: 50vw;
+        min-width: 768px;
+        min-height: 384px;
+    }
+    
+    .corpo {
+        width: 87vw;
+        padding: 32px 6.5vw 64px;
+        gap: 4vw;
+    }
+
+    .imagem_1 {
+        width: 79vw;
+        height: 50vw;
+        min-width: 609px;
+        border-radius: 2.5vw;
+    }
+
+    .titulo_line_up {
+        font-size: 64px;
+        padding: 25px 0 10px;
+    }
+
+    .data {
+        gap: 4vw;
+    }
+
+    .card_data {
+        font-size: 48px;
+        line-height: 62px;
+        min-width: 427px;
+    }
+
+    .linha_data {
+        display: block;
+    }
+
+    .bandas {
+        flex-direction: row;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        gap: 32px;
+    }
+
+    .imagem_2 {
+        height: 44vw;
+    }
+
+    .redes_sociais {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 16px;
+    }
+
+    /* Elementos do tema*/
+
+    .layout__input:checked ~.corpo > .corpo__secao > .imagem_1,
+    .layout__input:checked ~.boreal,    
+    .layout__input:checked ~.corpo > .boreal,
+    .layout__input:checked ~.corpo >  .corpo__secao > .boreal,
+    .layout__input:checked ~.rodape > .boreal,
+    .layout__input:checked ~.rodape > .redes_sociais > .boreal {
+        display: block;
+    }
+
+    .layout__input:checked ~.verao,
+    .layout__input:checked ~.corpo > .verao,
+    .layout__input:checked ~.corpo > .corpo__secao > .verao,
+    .layout__input:checked ~.rodape > .verao,
+    .layout__input:checked ~.rodape > .redes_sociais > .verao {
+        display: none;
+    }
+
+    /*responsividade das imagens no tema boreal*/
+
+    .layout__input:checked ~ .mobile, 
+    .layout__input:checked ~ .desktop,
+    .layout__input:checked ~ .corpo > .mobile, 
+    .layout__input:checked ~ .corpo > .desktop,
+    .layout__input:checked ~ .corpo > .corpo__secao > .mobile, 
+    .layout__input:checked ~ .corpo > .corpo__secao > .desktop {
+        display: none;
+    }
+
+    /*Mapa de setores*/
+    .imagem_mapa {
+        width: 50vw;
+        height: 31vw;
+        min-width: 382px;
+        border-radius: 2vw;
+    }
+    
+
+    .esquema_setores {
+        width: 84vw;
+        height: 74.1vw;
+    }
+
+    .estadio_legenda {
+        width: 70vw;
+        padding: 5vw 15vw;
+        text-align: left;
+    }
+
+    .titulo_secao,
+    .linha {
+        height: 80px;
+    }
+
+    .estadio_legenda > .titulo_secao {
+        font-size: 32px;
+    }
+
+    .titulo_mapa {
+        font-size: 40px;
+    }
+
+    .linha {
+        display: flex;
+        align-items: center;
+        text-align: center;
+        gap: 16px;
+    }
+
+    .linha > img{
+        width: 32px;
+        height: 32px;
+        border: 1px solid var(--cinza-4);
+        border-radius: 3px;
+    }
+
+}
