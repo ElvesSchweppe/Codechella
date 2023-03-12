@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#CodeChella2023 - A Experiência</title>
+    <title>#CodeChella2023 - Formulário</title>
     <link rel = "icon" href = "./assets/img/verao/icone_white.png" sizes="32x32">
     <link rel = "stylesheet" href = "./assets/styles/reset.css">
     <link rel = "stylesheet" href = "./assets/styles/style.css">
@@ -58,50 +58,53 @@
     
     <div class = "banner_container"></div>
     
-    <img class = "banner verao mobile" src = "./assets/img/verao/banner_xp-mobile.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner verao tablet" src = "./assets/img/verao/banner_xp-tablet.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner verao desktop" src = "./assets/img/verao/banner_xp-desktop.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner boreal mobile" src = "./assets/img/boreal/banner_xp-mobile.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner boreal tablet" src = "./assets/img/boreal/banner_xp-tablet.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner boreal desktop" src = "./assets/img/boreal/banner_xp-desktop.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
+    <img class = "banner verao mobile" src = "./assets/img/verao/banner_ingresso-mobile.png" alt = "Título da Página: Garanta seu Ingresso. A imagem ao fundo mostra céu azul, com algumas nuvens, e uma infinidade de itens de malabarismo (argolas, maças, cordas, aros, bastões) coloridos arremessados para cima de forma aleatória.">
+    <img class = "banner verao tablet" src = "./assets/img/verao/banner_ingresso-tablet.png" alt = "Título da Página: Garanta seu Ingresso. A imagem ao fundo mostra céu azul, com algumas nuvens, e uma infinidade de itens de malabarismo (argolas, maças, cordas, aros, bastões) coloridos arremessados para cima de forma aleatória.">
+    <img class = "banner verao desktop" src = "./assets/img/verao/banner_ingresso-desktop.png" alt = "Título da Página: Garanta seu Ingresso. A imagem ao fundo mostra céu azul, com algumas nuvens, e uma infinidade de itens de malabarismo (argolas, maças, cordas, aros, bastões) coloridos arremessados para cima de forma aleatória.">
+    <img class = "banner boreal mobile" src = "./assets/img/boreal/banner_ingresso-mobile.png" alt = "Título da Página: Garanta seu Ingresso. A imagem ao fundo mostra céu azul, com algumas nuvens, e uma infinidade de itens de malabarismo (argolas, maças, cordas, aros, bastões) coloridos arremessados para cima de forma aleatória.">
+    <img class = "banner boreal tablet" src = "./assets/img/boreal/banner_ingresso-tablet.png" alt = "Título da Página: Garanta seu Ingresso. A imagem ao fundo mostra céu azul, com algumas nuvens, e uma infinidade de itens de malabarismo (argolas, maças, cordas, aros, bastões) coloridos arremessados para cima de forma aleatória.">    
+    <img class = "banner boreal desktop" src = "./assets/img/boreal/banner_ingresso-desktop.png" alt = "Título da Página: Garanta seu Ingresso. A imagem ao fundo mostra céu azul, com algumas nuvens, e uma infinidade de itens de malabarismo (argolas, maças, cordas, aros, bastões) coloridos arremessados para cima de forma aleatória.">
     
     <main class="corpo">                      
-        <div class="corpo__secao corpo__secao_xp">
-            <img class = "imagem_1 mobile" src = "./assets/img/verao/xp_1.png" alt="Imagem que mostra uma mulher de etnia negra comemorando com confetes.">
-            <img class = "imagem_1 tablet" src = "./assets/img/verao/xp_1-tablet.png" alt="Imagem que mostra uma mulher de etnia negra comemorando com confetes.">
-            <img class = "imagem_1 desktop" src = "./assets/img/verao/xp_1-tablet.png" alt="Imagem que mostra uma mulher de etnia negra comemorando com confetes.">
-
+        <div class="corpo__secao corpo__secao_formulario" id="formulario__container">
+            <h2 class="titulo__info">
+                Preencha o formulário a seguir:
+            </h2>
+            
             <div class="corpo__secao_texto">
-                <h2 class = "titulo_secao">Acessibilidade e Inclusão</h2>
+                <form class="ficha_formulario" id="ficha_formulario">
+                    <label for="nome" class="campo_formulario">Nome Completo:</label>
+                    <input type="text" name="nome" id="form__nome" placeholder="Nome Sem Abreviações" required>
+                    
+                    <label for="email" class="campo_formulario">Email:</label>
+                    <input type="email" name="email" id="form__email" placeholder="exemplo@provedor.com" required> 
+                    
+                    <label for="tipo" class="campo_formulario">Tipo de ingresso:</label>
+                    <select name="tipo" id="form__tipo_ingresso" required>
+                        <option value="">Tipo de Ingresso:</option>
+                        <option value="Integral">Integral</option>
+                        <option value="Meia Entrada">Meia Entrada</option>
+                        <option value="Cortesia">Cortesia</option>
+                    </select>
+                    
+                    <label for="setor" class="campo_formulario">Setor:</label>
+                    <select name="setor" id="form__setor_ingresso" required>
+                        <option value="">Setor:</option>
+                        <option value="Pista Comum">Pista Comum</option>
+                        <option value="Pista Premium">Pista Premium</option>
+                        <option value="Cadeiras térreo">Cadeiras térreo</option>
+                        <option value="Cadeiras superiores">Cadeiras superiores</option>
+                    </select>
 
-                <p>Nosso evento tenta abraçar um público mais amplo em todos os sentidos, de todas as idades, corpos, gostos e pensamentos!  Isso está presente no  espaço físico, na sinalização, no treinamento da equipe de apoio, na comunicação em libras, braile, visual e tátil. Além disso, dispomos de ingressos gratuitos para pessoas com deficiência e acompanhantes, pessoas idosas e crianças!</p>
-
+                    <label for="data_nasc" class="campo_formulario">Data de nascimento:</label>
+                    <input type="date" name="data_nasc" id="form__data_nasc" required>
+                    
+                    <input class = "botao__avancar" type = "submit" id = "submeter__dados" value="Avançar!">
+                </form>        
             </div>
         </div>
-        <div class="corpo__secao corpo__secao_xp corpo__secao_reversa_xp">
-            <img class = "imagem_1 mobile" src = "./assets/img/verao/xp_2.png" alt="Imagem que mostra uma pessoa segurando uma sacola reutilizável com diversos materiais recicláveis.">
-            <img class = "imagem_1 tablet" src = "./assets/img/verao/xp_2-tablet.png" alt="Imagem que mostra uma pessoa segurando uma sacola reutilizável com diversos materiais recicláveis.">
-            <img class = "imagem_1 desktop" src = "./assets/img/verao/xp_2-tablet.png" alt="Imagem que mostra uma pessoa segurando uma sacola reutilizável com diversos materiais recicláveis.">
-
-            <div class="corpo__secao_texto">
-                <h2 class = "titulo_secao">Sustentabilidade</h2>
-
-                <p>Queremos estar aqui celebrando daqui a 50, 100 anos! Por isso, levamos o futuro do nosso planeta a sério. Nosso festival é carbono zero, com utilização de copos retornáveis, coleta e destinação adequada de resíduos, e transporte coletivo.</p>
-            </div>
-        </div>
-        <div class="corpo__secao corpo__secao_xp">
-            <img class = "imagem_1 mobile" src = "./assets/img/verao/xp_3.png" alt="Fotografia de uma roda gigante com céu azul ao fundo.">
-            <img class = "imagem_1 tablet" src = "./assets/img/verao/xp_3-tablet.png" alt="Fotografia de uma roda gigante com céu azul ao fundo.">
-            <img class = "imagem_1 desktop" src = "./assets/img/verao/xp_3-tablet.png" alt="Fotografia de uma roda gigante com céu azul ao fundo.">
-
-            <div class="corpo__secao_texto">
-                <h2 class = "titulo_secao">Atrações</h2>
-
-                <p>Intervenções artísticas e culturais para todos os gostos! Durante os intervalos dos shows, nossa experiência contará com recreação para crianças, oficina de cerâmica, origami, circo e aquarela! Além disso, nosso espaço contra com 3 praças de alimentação, roda gigante e outros brinquedos!</p>
-            </div>
-        </div>
-     </main>   
-
+    </main>
+    
     <footer class="rodape">
         <img class = "logo logo_rodape verao" src = "./assets/img/verao/Logo-rodape.png" alt = "Logo do CodeChella2023">
         <img class = "logo logo_rodape boreal" src = "./assets/img/boreal/Logo-rodape.png" alt = "Logo do CodeChella2023">
@@ -126,6 +129,7 @@
 
     </footer>
 
+    <script src="./assets/js/form_ingresso.js"></script>
 </body>
 
 </html>

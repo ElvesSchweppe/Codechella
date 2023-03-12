@@ -29,7 +29,7 @@
         flex-direction: row;
         flex-wrap: nowrap;
         justify-content: center;
-        width: 100vw;
+        width: 100%;
         top: 99px;
         left: 0;
     }
@@ -39,22 +39,22 @@
     }
 
     .banner{
-        height: 50vw;
+        height: 50%;
         min-width: 768px;
         min-height: 384px;
     }
     
     .corpo {
-        width: 87vw;
-        padding: 32px 6.5vw 64px;
-        gap: 4vw;
+        width: 87%;
+        padding: 32px 6.5% 64px;
+        gap: 4%;
     }
 
     .imagem_1 {
-        width: 79vw;
-        height: 50vw;
+        width: 79%;
+        height: 50%;
         min-width: 609px;
-        border-radius: 2.5vw;
+        border-radius: 2.5%;
     }
 
     .titulo_line_up {
@@ -63,7 +63,7 @@
     }
 
     .data {
-        gap: 4vw;
+        gap: 4%;
     }
 
     .card_data {
@@ -86,7 +86,7 @@
     }
 
     .imagem_2 {
-        height: 44vw;
+        height: 44%;
     }
 
     .redes_sociais {
@@ -128,25 +128,25 @@
 
     /*Mapa de setores*/
     .imagem_mapa {
-        width: 50vw;
-        height: 31vw;
+        width: 50%;
+        height: 31%;
         min-width: 382px;
-        border-radius: 2vw;
+        border-radius: 2%;
     }
     
 
     .esquema_setores {
-        width: 84vw;
-        height: 74.1vw;
+        width: 100%;
+        height: auto;
     }
 
     .estadio_legenda {
-        width: 70vw;
-        padding: 5vw 15vw;
+        width: 70%;
+        padding: 5% 15%;
         text-align: left;
     }
 
-    .titulo_secao,
+    .titulo_secao_legenda,
     .linha {
         height: 80px;
     }
@@ -173,4 +173,23 @@
         border-radius: 3px;
     }
 
+    /*ingresso*/
+
+    .corpo__secao_formulario,
+    .corpo__secao_formulario .corpo__secao_texto,
+    .ficha_formulario {
+        width: 97%;
+        max-width: 842px;
+      }
+    
+
+    .ingresso_mesmo,
+    .mensagem_ingresso {
+        width: 76%;
+        max-width: 720px;
+    }
+
+    .ingresso_mesmo img:nth-child(5) {
+        width: 50%;
+    }
 }

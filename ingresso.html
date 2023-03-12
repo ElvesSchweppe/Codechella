@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>#CodeChella2023 - A Experiência</title>
+    <title>#CodeChella2023 - \o/ Seu Ingresso! \o/</title>
     <link rel = "icon" href = "./assets/img/verao/icone_white.png" sizes="32x32">
     <link rel = "stylesheet" href = "./assets/styles/reset.css">
     <link rel = "stylesheet" href = "./assets/styles/style.css">
@@ -58,50 +58,36 @@
     
     <div class = "banner_container"></div>
     
-    <img class = "banner verao mobile" src = "./assets/img/verao/banner_xp-mobile.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner verao tablet" src = "./assets/img/verao/banner_xp-tablet.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner verao desktop" src = "./assets/img/verao/banner_xp-desktop.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner boreal mobile" src = "./assets/img/boreal/banner_xp-mobile.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner boreal tablet" src = "./assets/img/boreal/banner_xp-tablet.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
-    <img class = "banner boreal desktop" src = "./assets/img/boreal/banner_xp-desktop.png" alt = "Título da Página: A Experiencia. Imagem ao fundo de pessoas com pinturas no rosto se divertindo.">
+    <img class = "banner verao mobile" src = "./assets/img/verao/banner_ingresso_qr-mobile.png" alt = "Título da Página: Garanta Seu Ingresso está Aqui. A imagem ao fundo mostra uma garota com o rosto pintado olhando para cima e sorrindo.">
+    <img class = "banner verao tablet" src = "./assets/img/verao/banner_ingresso_qr-tablet.png" alt = "Título da Página: Garanta Seu Ingresso está Aqui. A imagem ao fundo mostra uma garota com o rosto pintado olhando para cima e sorrindo.">
+    <img class = "banner verao desktop" src = "./assets/img/verao/banner_ingresso_qr-desktop.png" alt = "Título da Página: Garanta Seu Ingresso está Aqui. A imagem ao fundo mostra uma garota com o rosto pintado olhando para cima e sorrindo.">
+    <img class = "banner boreal mobile" src = "./assets/img/boreal/banner_ingresso_qr-mobile.png" alt = "Título da Página: Garanta Seu Ingresso está Aqui. A imagem ao fundo mostra uma garota com o rosto pintado olhando para cima e sorrindo.">
+    <img class = "banner boreal tablet" src = "./assets/img/boreal/banner_ingresso_qr-tablet.png" alt = "Título da Página: Garanta Seu Ingresso está Aqui. A imagem ao fundo mostra uma garota com o rosto pintado olhando para cima e sorrindo.">   
+    <img class = "banner boreal desktop" src = "./assets/img/boreal/banner_ingresso_qr-desktop.png" alt = "Título da Página: Garanta Seu Ingresso está Aqui. A imagem ao fundo mostra uma garota com o rosto pintado olhando para cima e sorrindo.">
     
     <main class="corpo">                      
-        <div class="corpo__secao corpo__secao_xp">
-            <img class = "imagem_1 mobile" src = "./assets/img/verao/xp_1.png" alt="Imagem que mostra uma mulher de etnia negra comemorando com confetes.">
-            <img class = "imagem_1 tablet" src = "./assets/img/verao/xp_1-tablet.png" alt="Imagem que mostra uma mulher de etnia negra comemorando com confetes.">
-            <img class = "imagem_1 desktop" src = "./assets/img/verao/xp_1-tablet.png" alt="Imagem que mostra uma mulher de etnia negra comemorando com confetes.">
-
-            <div class="corpo__secao_texto">
-                <h2 class = "titulo_secao">Acessibilidade e Inclusão</h2>
-
-                <p>Nosso evento tenta abraçar um público mais amplo em todos os sentidos, de todas as idades, corpos, gostos e pensamentos!  Isso está presente no  espaço físico, na sinalização, no treinamento da equipe de apoio, na comunicação em libras, braile, visual e tátil. Além disso, dispomos de ingressos gratuitos para pessoas com deficiência e acompanhantes, pessoas idosas e crianças!</p>
-
+        <section class="ingresso_gerado" id="ingresso_container">
+            <h2 class="mensagem_ingresso">Uhul, agora sim!<br> 
+                Seu ingresso está aqui, apresente na entrada do evento e divirta-se!
+            </h2>
+            
+            <div class="ingresso_mesmo">
+                <img class="verao" src="./assets/img/verao/Logo-rodape.png" alt="Logo do CodeChella">
+                <img class="boreal" src="./assets/img/verao/Logo.png" alt="Logo do CodeChella">
+                <img class="verao" src="./assets/img/verao/favicon.png" alt="Ícone Codechella - Símbolos: menor que, barra e maior que">
+                <img class="boreal" src="./assets/img/verao/icone_white.png" alt="Ícone Codechella - Símbolos: menor que, barra e maior que">
+                <img src="./assets/img/verao/qr_code_1.png" alt="QRCode do ingresso">
+                <div id = "novo__ingresso" class = "ingresso__dados">
+                    <h3 id = "ing_nome" class = "ing_nome"></h3>
+                    <h3 id = "ing_tipo" class = "ing_tipo ing_dado"></h3>
+                    <h3 id = "ing_setor" class = "ing_setor ing_dado"></h3>
+                    <h3 id = "ing_data" class = "ing_data ing_dado"></h3>
+                    <h3 id = "ing_local" class = "ing_local ing_dado"></h3>
+                </div>
             </div>
-        </div>
-        <div class="corpo__secao corpo__secao_xp corpo__secao_reversa_xp">
-            <img class = "imagem_1 mobile" src = "./assets/img/verao/xp_2.png" alt="Imagem que mostra uma pessoa segurando uma sacola reutilizável com diversos materiais recicláveis.">
-            <img class = "imagem_1 tablet" src = "./assets/img/verao/xp_2-tablet.png" alt="Imagem que mostra uma pessoa segurando uma sacola reutilizável com diversos materiais recicláveis.">
-            <img class = "imagem_1 desktop" src = "./assets/img/verao/xp_2-tablet.png" alt="Imagem que mostra uma pessoa segurando uma sacola reutilizável com diversos materiais recicláveis.">
-
-            <div class="corpo__secao_texto">
-                <h2 class = "titulo_secao">Sustentabilidade</h2>
-
-                <p>Queremos estar aqui celebrando daqui a 50, 100 anos! Por isso, levamos o futuro do nosso planeta a sério. Nosso festival é carbono zero, com utilização de copos retornáveis, coleta e destinação adequada de resíduos, e transporte coletivo.</p>
-            </div>
-        </div>
-        <div class="corpo__secao corpo__secao_xp">
-            <img class = "imagem_1 mobile" src = "./assets/img/verao/xp_3.png" alt="Fotografia de uma roda gigante com céu azul ao fundo.">
-            <img class = "imagem_1 tablet" src = "./assets/img/verao/xp_3-tablet.png" alt="Fotografia de uma roda gigante com céu azul ao fundo.">
-            <img class = "imagem_1 desktop" src = "./assets/img/verao/xp_3-tablet.png" alt="Fotografia de uma roda gigante com céu azul ao fundo.">
-
-            <div class="corpo__secao_texto">
-                <h2 class = "titulo_secao">Atrações</h2>
-
-                <p>Intervenções artísticas e culturais para todos os gostos! Durante os intervalos dos shows, nossa experiência contará com recreação para crianças, oficina de cerâmica, origami, circo e aquarela! Além disso, nosso espaço contra com 3 praças de alimentação, roda gigante e outros brinquedos!</p>
-            </div>
-        </div>
-     </main>   
-
+        </section>
+    </main>
+    
     <footer class="rodape">
         <img class = "logo logo_rodape verao" src = "./assets/img/verao/Logo-rodape.png" alt = "Logo do CodeChella2023">
         <img class = "logo logo_rodape boreal" src = "./assets/img/boreal/Logo-rodape.png" alt = "Logo do CodeChella2023">
@@ -125,7 +111,7 @@
         <p class="assinatura">Realizado pelo Aluno: <strong class="destaque_rodape">Elves K. Schweppe</strong></p>
 
     </footer>
-
+    <script src="./assets/js/ingresso.js"></script>
 </body>
 
 </html>

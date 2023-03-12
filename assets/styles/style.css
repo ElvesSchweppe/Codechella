@@ -93,6 +93,7 @@
 /*Ajuste Padrão Verão*/
 body{
     font-family: var(--fonte-textos);
+    width: 100vw;
 }
 
 .topo{
@@ -112,18 +113,17 @@ nav{
 }
 
 .logo {
-    color: transparent;
-    width: 234px
+    color: var(--branco);
+    font-family: 'Freckle Face', cursive;
+    font-size: 42px;
+    letter-spacing: 0.1rem;
+    line-height: 64px;
+    text-decoration: none;
+    
 }
 
-.logo_nav {
-    width: 234px;
-    height: 64px;
-    background-image: url("../img/verao/Logo.png");
-}
-
-.logo_nav:hover {
-    background-image: url("../img/verao/Logo_hover-verao.png");
+.logo:hover {
+    color: var(--primaria-verao-mostarda)
 }
 
 .topo__menu-hamburguer {
@@ -140,8 +140,6 @@ nav{
 .topo__menu-hamburguer:hover {
     transform: scale(1.5);
 }
-
-
 
 .lista-menu{
     display: none;
@@ -167,7 +165,7 @@ nav{
 
 .lista-menu__linha {
     border: 2px solid var(--branco);
-    margin: 0 4vw;
+    margin: 0 8%;
 }
 
 .lista-menu__link {
@@ -188,23 +186,22 @@ nav{
 }
 
 .banner{
-    width: 100vw;
-    height: 75vw;
+    width: 100%;
     min-width: 320px;
     min-height: 240px;
 }
 
-.corpo {
+.corpo,
+.corpo__info {
     min-width: 320px;
     padding: 32px 0;
-
     background: var(--degrade-verao);
     display:flex;
     flex-direction: column;
     align-items: center;
     text-align: center;
     color: var(--cinza-4);
-    gap: 2vw;
+    row-gap: 2%;
 }
 
 .corpo__secao{
@@ -216,19 +213,17 @@ nav{
 }
 
 .imagem_1 {
-    width: 86vw;
-    height: 106vw;
+    width: 86%;
+    height: 106%;
     min-width: 313px;
     min-height: 381px;
-    border-radius: 4vw;
+    border-radius: 4%;
 }
 
 .corpo__secao_texto{
-    display:flex;
+    display: flex;
     flex-direction: column;
     align-items: center;
-    text-align: center;
-    justify-content: center;
     margin: 32px 0;
 }
 
@@ -236,9 +231,7 @@ nav{
     font-size: 32px;
     line-height: 38px;
     font-weight: 700;
-    width: 87vw;
-    min-width: 313px;
-    margin-bottom: 24px;
+    padding-bottom: 24px;
 }
 
 p {
@@ -248,12 +241,11 @@ p {
     padding: 5px;
 }
 
-.ingresso {
+.botao__ingresso {
     display: flex;
-    justify-content: center;
+    justify-content: space-evenly;
     align-items: center;
     padding: 8px 16px;
-    gap: 16px;
     width: 280px;
     height: 56px;
     font-weight: 700;
@@ -261,15 +253,15 @@ p {
     line-height: 40px;
     color: var(--branco);
     text-decoration: none;
-    background: var(--primaria-verao-azul);
+    background-color: var(--primaria-verao-azul);
     border-radius: 16px;
     box-shadow: 4px 4px 0px var(--cinza-4);
     transition: 0.5s all;
     margin-top: 50px;
 }
 
-.ingresso:hover {
-    background: var(--verao--hover);
+.botao__ingresso:hover {
+    background-color: var(--verao--hover);
 }
 
 .titulo_line_up {
@@ -277,13 +269,22 @@ p {
     font-weight: 400;
     font-size: 48px;
     line-height: 62px;
-    margin: 50px 0;
+    padding: 48px 0;
+}
+
+.atracoes{
+    display: flex;
+    flex-direction: column;
+    gap: 32px;
+    padding: 0 24px;
+    width: calc(100% - 48px);
 }
 
 .data {
     display: flex;
     justify-content: center;
     align-items: center;
+    margin-bottom: 16px;
 }
 
 .card_data{
@@ -299,7 +300,7 @@ p {
 }
 
 .linha_data {
-    width: 8vw;
+    width: 8%;
     border: 1px solid var(--primaria-verao-mostarda);
     display: none;
 }
@@ -308,7 +309,7 @@ p {
     min-width: 320px;
     display: flex;
     flex-direction: column;
-    
+    gap: 8px;
 }
 
 .bandas_1 {
@@ -336,8 +337,7 @@ p {
 }
 
 .imagem_2 {
-    width: 100vw;
-    height: 94vw;
+    width: 100%;
 }
 
 .rodape {
@@ -368,7 +368,8 @@ p {
 
 /*Mudança de Tema Boreal*/
 
-.layout__input:checked ~.corpo {
+.layout__input:checked ~.corpo,
+.layout__input:checked ~.corpo > .ingresso_gerado > .ingresso_mesmo {
     background: var(--degrade-boreal);
     color: var(--branco) ;
 }
@@ -379,8 +380,10 @@ p {
 }
 
 .layout__input:checked ~ .topo,
-.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .ingresso {
-    background: var(--primaria-boreal-roxo)
+.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .botao__ingresso,
+.layout__input:checked ~.corpo__info > .lista_perguntas > .item_pergunta > .faq,
+.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .ficha_formulario > .botao__avancar {
+    background-color: var(--primaria-boreal-roxo)
 }
 
 .layout__input:checked ~.topo > .layout > .switcher > .layout__botao { 
@@ -401,22 +404,21 @@ p {
     color: var(--branco);
 }
 
-.layout__input:checked ~.topo > nav > .topo__conteudo > .lista-menu > .lista-menu__item > .lista-menu__link:hover {
-    color: var(--terciaria-boreal-verdeclaro)
-}
-
-.layout__input:checked ~.topo > nav > .topo__conteudo > .logo > .logo_nav:hover {
-    background-image: url("../img/boreal/Logo_hover-boreal.png");
-}
-
-.layout__input:checked ~.rodape > p > .destaque_rodape{
+.layout__input:checked ~.topo > nav > .topo__conteudo > .logo:hover,
+.layout__input:checked ~.topo > nav > .topo__conteudo > .lista-menu > .lista-menu__item > .lista-menu__link:hover,
+.layout__input:checked ~.rodape > p > .destaque_rodape {
     color: var(--terciaria-boreal-verdeclaro);
 }
 
-.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .ingresso:hover {
-    background: var(--boreal--hover);
+.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .botao__ingresso:hover,
+.layout__input:checked ~.corpo > .corpo__secao > .corpo__secao_texto > .ficha_formulario > .botao__avancar:hover {
+    background-color: var(--boreal--hover);
 }
 
+.layout__input:checked ~.corpo__info > .lista_perguntas > .item_pergunta > .faq_resposta {
+    background-color: var(--terciaria-boreal-lilas);
+    color: var(--cinza-4);
+}
 /* Elementos do tema*/
 
 .layout__input:checked ~.corpo > .corpo__secao > .imagem_1,
@@ -424,7 +426,8 @@ p {
 .layout__input:checked ~.corpo > .boreal,
 .layout__input:checked ~.corpo >  .corpo__secao > .boreal,
 .layout__input:checked ~.rodape > .boreal,
-.layout__input:checked ~.rodape > .redes_sociais > .boreal {
+.layout__input:checked ~.rodape > .redes_sociais > .boreal,
+.layout__input:checked ~.corpo > .ingresso_gerado > .ingresso_mesmo > .boreal {
     display: block;
 }
 
@@ -432,7 +435,8 @@ p {
 .layout__input:checked ~.corpo > .verao,
 .layout__input:checked ~.corpo > .corpo__secao > .verao,
 .layout__input:checked ~.rodape > .verao,
-.layout__input:checked ~.rodape > .redes_sociais > .verao {
+.layout__input:checked ~.rodape > .redes_sociais > .verao,
+.layout__input:checked ~.corpo > .ingresso_gerado > .ingresso_mesmo > .verao {
     display: none;
 }
 
@@ -452,17 +456,17 @@ p {
 /*Mapa de setores*/
 
 .mapa_legenda {
-    width: 100vw;
+    width: 100%;
 }
 
 .esquema_setores {
-    width: 100vw;
-    height: 88.3vw;
+    width: 100%;
+    height: 88.3%;
 }
 
 .estadio_legenda {
-    width: 70vw;
-    padding: 5vw 15vw;
+    width: 75%;
+    padding: 5% 0%;
     text-align: left;
 }
 
@@ -471,16 +475,17 @@ p {
 }
 
 .imagem_mapa {
-    width: 87vw;
-    height: 66vw;
+    width: 87%;
+    height: 66%;
     min-width: 313px;
     min-height: 239px;
-    border-radius: 4vw;
+    border-radius: 4%;
 }
 
-.titulo_secao,
-.linha {
-    height: 70px;
+.titulo_secao_legenda {
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
 }
 
 .linha {
@@ -497,7 +502,217 @@ p {
     border-radius: 3px;
 }
 
+.corpo_setores {
+ padding: 0 2%;
+}
 
+/*Informações*/
+.corpo__info {
+    padding: 32px 16px;
+}
+
+.titulo__info {
+    font-family: var(--fonte-titulos);
+    font-size: 32px;
+    line-height: 42px;   
+    padding: 32px 24px; 
+}
+
+.lista_perguntas {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+    width: 95%;
+}
+
+.faq {
+    background: var(--primaria-verao-azul);
+    color: var(--branco);
+    font-family: var(--fonte-textos);
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+    padding: 16px;
+    text-align: left; 
+    display: grid;
+    grid-template-columns: 19fr 1fr;
+    align-items: center;
+    gap: 20px;
+    width: 95%;
+}
+
+.seta_faq {
+    width: 14px;
+    height: 7px;
+    background: url(../img/verao/arrow_drop_down.png);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+    align-self: center;
+}
+
+.item_pergunta[open] > .faq > .seta_faq  {
+    background-image: url(../img/verao/arrow_drop_up.png);
+}
+
+
+.faq_resposta {
+    background: var(--secundaria-verao-azulclaro);
+    font-family: var(--fonte-textos);
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+    padding: 16px;
+    text-align: left;
+    width: 95%;
+}
+
+
+
+/*Formulario*/
+.ficha_formulario {
+    display: grid;
+    row-gap: 8px;
+}
+
+.corpo__secao_formulario,
+.corpo__secao_formulario .corpo__secao_texto,
+.ficha_formulario {
+    width: 97%
+}
+
+.campo_formulario,
+.ficha_formulario input,
+.ficha_formulario select {
+    font-family: var(--fonte-textos);
+    line-height: 1.5;
+    text-align: left;
+    width: calc(100% - 20px);
+    padding: 0 10px;
+    box-sizing: content-box;
+}
+
+.campo_formulario {
+    font-weight: 700;
+    font-size: 32px;
+}
+
+.ficha_formulario input,
+.ficha_formulario select {
+    font-weight: 400;
+    font-size: 20px;
+    border: none;
+    height: 48px;
+    margin-bottom: 24px;
+}
+
+.ficha_formulario select {
+    background-color: var(--branco);
+    background-image: url(../img/verao/arrow_gray_drop_down.png);
+    background-repeat: no-repeat;
+    background-position: 95% 50%;
+    appearance: none;
+}
+
+
+.ficha_formulario .botao__avancar {
+    padding: 0 16px;
+    width: 164px;
+    height: 56px;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 40px;
+    color: var(--branco);
+    background-color: var(--primaria-verao-azul);
+    background-image: url(../img/verao/avancar.png);
+    background-repeat: no-repeat;
+    background-position: 90% 50%;
+    border: none;
+    border-radius: 16px;
+    box-shadow: 4px 4px 0px var(--cinza-4);
+    transition: 0.5s all;
+    margin-top: 50px;
+    cursor: pointer;
+    text-align: left;
+    justify-self: center;
+}
+
+.botao__avancar:hover {
+    background-color: var(--verao--hover);
+}
+
+.ingresso_oculto {
+    display: none;
+}
+
+
+/*Ingresso*/
+
+.mensagem_ingresso {
+    font-family: var(--fonte-textos);
+    font-size: 32px;
+    line-height: 38px;
+    padding: 32px 24px;
+}
+
+.ingresso_gerado {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.ingresso_mesmo {
+    width: 72%;
+    max-width: 320px;
+    padding: 32px;
+    background: var(--degrade-verao);
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    align-items: center;
+    justify-content: center;
+}
+
+.ingresso_mesmo img:nth-child(1),
+.ingresso_mesmo img:nth-child(2){
+    grid-column: 1 / 2;
+    width: 120px;
+    height: auto;
+}
+
+.ingresso_mesmo img:nth-child(3),
+.ingresso_mesmo img:nth-child(4){
+    grid-column: 2 / 3;
+    width: 32px;
+    height: 32px;
+    justify-self: right;
+}
+
+.ingresso_mesmo img:nth-child(5),
+.ingresso_mesmo .ingresso__dados{
+    grid-column: 1 / 3;
+    justify-self: center;
+    width: 70%;
+    margin: 32px 0;
+}
+
+.ingresso__dados {
+    width: 90% ;
+}
+
+
+.ing_nome {
+    text-transform: capitalize;
+    font-weight: 700;
+    font-size: 32px;
+    line-height: 38px;
+}
+
+.ing_dado {
+    font-weight: 500;
+    font-size: 20px;
+    line-height: 40px;
+}
 
 @media screen and (max-width: 324px) {
     .layout {
