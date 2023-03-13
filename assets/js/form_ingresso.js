@@ -21,10 +21,15 @@ botao.addEventListener ("submit", (evento) => {
    
 })
 
-function criaIngresso(nome, tipo, setor) {    
-    sessionStorage.setItem("ing_nome", nome);
-    sessionStorage.setItem("ing_tipo", tipo);
-    sessionStorage.setItem("ing_setor", setor);
-    sessionStorage.setItem("ing_data", "11/03/2023");
-    sessionStorage.setItem("ing_local", "São Paulo - SP");
+function criaIngresso(nome, tipo, setor) {
+    
+    const ingresso = {
+    'ing_nome': nome,
+    'ing_tipo': tipo,
+    'ing_setor': "Setor: " + setor,
+    'ing_data': "Data: 11/03/2023",
+    'ing_local': "Local: São Paulo - SP"
+    }
+
+    sessionStorage.setItem('ingresso', JSON.stringify(ingresso))
 }
